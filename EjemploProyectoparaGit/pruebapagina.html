@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Segunda Pagina</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+
+
+	<link rel="icon" href="../img/fotosegundapagina.png">
+	<link href="../css/estilos.css" rel="stylesheet">
+	<link href="../plugins/DataTables-1.10.22/css/jquery.dataTables.min.css"rel="stylesheet"/>
+	<link href="../plugins/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+
+<body style="background-image: url(../img/galeria6.jpeg);">
+	
+	<!--BARRA DE NAVEGACIÓN-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light background-image">
+		<a class="navbar-brand" href="index.html">Inicio</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	    </button>
+	  
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    	<ul class="navbar-nav mr-auto">
+		        <li class="nav-item active">
+		        	<a class="nav-link" href="#">
+		        		Noticias <span class="sr-only">(current)</span>
+		        	</a>
+		        </li>
+		        <li class="nav-item">
+		        	<a class="nav-link" href="#">Link</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		            	Quienes Somos
+		          	</a>
+		          	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			            <a class="dropdown-item" href="#">Misión</a>
+			            <a class="dropdown-item" href="#">Visión</a>
+			            <div class="dropdown-divider"></div>
+			            <a class="dropdown-item" href="#">
+			            	Registrarse
+			            </a>
+		          	</div>
+		        </li>
+		        <li class="nav-item">
+		          	<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+		          		Contacto
+		          	</a>
+		        </li>
+	    	</ul>
+
+	    	<form class="form-inline my-2 my-lg-0">
+	        	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	        	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	      	</form>
+	    </div>
+  	</nav>
+	
+
+
+  	<div class="row">
+  		<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+	      	<!-- ================== FORM ================== -->     
+		   	<form action="action_page.php" id="form-register" style="border:1px solid #ccc" class="colores">
+		    	<div class="container" style="background-color: rgba(255,255,255, 0.6)">
+			        <h1>Registrarse</h1>
+			        
+			        <hr>
+			        <div class="row">
+			        	<div class="col-6">
+			        		<div class="form-group">
+						        <label for="text"><b>Nombre</b></label>
+						        <input class="form-control" type="text" placeholder="Nombre" id="nombre">
+					    	</div>	
+
+					    	<div class="form-group">
+						        <label for="text"><b>Ciudad</b></label>
+						        <input class="form-control" type="text" placeholder="Ciudad" id="ciudad">        
+					    	</div>		        		
+			        	</div>
+
+			        	<div class="col-6">
+			        		<div class="form-group">
+						       	<label for="text"><b>Apellido</b></label>
+						        <input class="form-control" type="text" placeholder="Apellido" id="apellido">
+					    	</div>		
+
+					    	<div class="form-group">
+						        <label for="text"><b>País</b></label>
+						        <input class="form-control" type="text" placeholder="País" id="pais">
+					    	</div>	        		
+			        	</div>			        	
+			        </div>
+
+			        <div class="row">
+			        	<div class="col-6">
+			        		<div class="form-group">
+						        <label for="email"><b>Email</b></label>
+						        <input class="form-control" type="text" placeholder="@Enter Email" id="email" required>
+					    	</div>			        		
+			        	</div>
+
+			        	<div class="col-6">
+			        		<div class="form-group">
+						        <label for="psw"><b>Password</b></label>
+						        <input class="form-control" type="password" placeholder="Enter Password" id="psw" required>
+			    			</div>
+			        	</div>
+
+			        	<div class="col-6">
+
+					    	<div class="form-group">
+						        <label for="psw-repeat"><b>Repeat Password</b></label>
+						        <input class="form-control" type="password" placeholder="Repeat Password" id="psw-repeat" required>
+						    </div>
+			        	</div>
+
+		      		  </div>			        
+
+
+			        <p>Acepta <a href="#" style="color:dodgerblue">Terminos de privacidad</a>.</p>
+
+			        		        
+			        <div class="clearfix" align="center">
+			            <button type="button" class="btn btn-secondary">Borrar</button>
+			            <button type="submit" class="btn btn-success">Agregar</button>
+			        </div>
+		    	</div>
+			</form>
+		</div>
+
+		<div class="col-xl-6 col-lg-4 col-md-12 col-sm-12" >
+	       <!-- ================== DATATABLE ================== -->	 
+	       <!--<div class="table-responsive">-->
+	       		<table class="table" id="data_table" >
+
+	       			<thead>
+	       				<tr>
+	       					<th>ID</th>
+				            <th>Nombre</th>
+				            <th>Apellido</th>
+				            <th>Ciudad</th>
+				            <th>Correo</th>
+				            <th>País</th>
+			         	</tr>
+		         	</thead>
+		        	<tbody>
+			        	<tr>
+			            	<td align="center">1</td>
+				            <td><b>Pedro</b></td>
+				            <td>Pérez</td>
+				            <td>Cali</td>
+				            <td>prueba@gmail.com</td>
+				            <td>Colombia</td>
+				        </tr>
+			        	<tr>
+				            <td align="center">2</td>
+				            <td><b>Camila</b></td>
+				            <td>Gómez</td>
+				            <td>Bogotá</td>
+				            <td>prueba@gmail.com</td>
+				            <td>Colombia</td>
+				        </tr>
+				        <tr>
+				            <td align="center">3</td>
+				            <td><b>Jhon</b></td>
+				            <td>Velasco</td>
+				            <td>Lima</td>
+				            <td>prueba@gmail.com</td>
+				            <td>Perú</td>
+				        </tr>
+
+				        <tr>
+			            	<td align="center">1</td>
+				            <td><b>Pedro</b></td>
+				            <td>Pérez</td>
+				            <td>Cali</td>
+				            <td>prueba@gmail.com</td>
+				            <td>Colombia</td>
+				        </tr>
+
+				        <tr>
+			            	<td align="center">1</td>
+				            <td><b>Pedro</b></td>
+				            <td>Pérez</td>
+				            <td>Cali</td>
+				            <td>prueba@gmail.com</td>
+				            <td>Colombia</td>
+				        </tr>
+
+
+		        	</tbody>
+		    	</table>         
+	      <!-- </div>-->	      
+    	</div>
+	</div>
+ 
+	<!-- ================== SCRIPTS JS ================== -->
+	<script src="../plugins/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script src="../plugins/DataTables-1.10.22/js/jquery.dataTables.min.js"></script>
+	<script src="../plugins/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+
+		datatable = $('#data_table').DataTable({
+			
+			"scrollY": "200",
+        	
+	          //para cambiar el lenguaje a español
+	          "language": {
+
+	              "lengthMenu": "Mostrar _MENU_ registros",
+	              "zeroRecords": "No se encontraron resultados",
+	              "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+	              "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+	              "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+	              "sSearch": "Buscar:",
+	              "oPaginate": {
+	                  "sFirst": "Primero",
+	                  "sLast":"Último",
+	                  "sNext":"Siguiente",
+	                  "sPrevious": "Anterior"
+	              },
+	              "sProcessing":"Procesando...",
+	          }
+	      });
+		document.getElementById("form-register").onsubmit = (event) => {
+			event.preventDefault();
+			const dataRegister = document.querySelectorAll("#form-register input");
+			const tabla = document.getElementById("data_table");
+			const idRegistro = tabla.rows.length;
+			const fila = tabla.insertRow(idRegistro);
+
+			const columnaId = fila.insertCell(0);
+			columnaId.innerHTML = idRegistro;
+			columnaId.setAttribute("align", "center");
+
+			const columnaNombre = fila.insertCell(1);
+			columnaNombre.innerHTML = "<b>"+dataRegister.item(0).value+"</b>";
+
+			const columnaApellido = fila.insertCell(2);
+			columnaApellido.innerHTML = dataRegister.item(1).value;
+
+			const columnaCiudad = fila.insertCell(3);
+			columnaCiudad.innerHTML = dataRegister.item(2).value;
+
+			const columnaCorreo = fila.insertCell(4);
+			columnaCorreo.innerHTML = dataRegister.item(4).value;
+
+			const columnaPais = fila.insertCell(5);
+			columnaPais.innerHTML = dataRegister.item(3).value;		
+		};
+	  
+	</script>
+</body>
+</html>

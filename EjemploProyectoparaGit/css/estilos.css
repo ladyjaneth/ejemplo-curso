@@ -1,0 +1,84 @@
+
+body{
+	background-color: lightfrey;
+	font-family:sans-serif;
+}
+
+
+.colores{
+
+margin: 15px;
+background-color: rgba(255,255,255, 0.7);
+
+}
+
+.card{
+	margin: 15px;
+	
+}
+.card-left{
+	margin-left: 55px;
+}
+
+
+
+.card-text {
+	text-align: justify;
+}
+
+
+h1{
+    color: darkcyan;
+    text-align: center;
+}
+
+.header {
+  background: url(../img/fotoslide.jpeg) no-repeat center;
+  background-size: cover;
+
+}
+
+
+img{
+	object-fit: cover;
+}
+
+.formulario2{
+	width: 500px;
+	align:center;
+
+}
+
+.container{
+	margin: auto;
+	background-color: white;
+	width: 100%;	
+	padding: 0px; 
+}
+
+
+#data_table_wrapper{
+	margin-top: 10px;
+	background-color: rgba(255,255,255, 0.7);
+}
+
+
+tr:nth-child(even){
+    background-color: #c9c9c9;
+}
+tr:nth-child(odd){
+    background-color: #dcdcdc;
+}
+th {
+    background-color: rgb(145, 248, 248);
+}
+table, th, td {
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+table {
+    width: 50%;
+}
+
+
+
